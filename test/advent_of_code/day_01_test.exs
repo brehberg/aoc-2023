@@ -3,19 +3,44 @@ defmodule AdventOfCode.Day01Test do
 
   import AdventOfCode.Day01
 
-  @tag :skip
+  # @tag :skip
   test "part1" do
-    input = nil
+    input = "1abc2
+pqr3stu8vwx
+a1b2c3d4e5f
+treb7uchet"
     result = part1(input)
 
-    assert result
+    assert result == 142
   end
 
-  @tag :skip
+  # @tag :skip
   test "part2" do
-    input = nil
+    input = "two1nine
+eightwothree
+abcone2threexyz
+xtwone3four
+4nineeightseven2
+zoneight234
+7pqrstsixteen"
     result = part2(input)
 
-    assert result
+    assert result == 281
+  end
+
+  # @tag :skip
+  test "full_part1" do
+    input = AdventOfCode.Input.get!(1, 2023)
+    result = part1(input)
+
+    assert result == 55712
+  end
+
+  # @tag :skip
+  test "full_part2" do
+    input = AdventOfCode.Input.get!(1, 2023)
+    result = part2(input)
+
+    assert result == 55413
   end
 end

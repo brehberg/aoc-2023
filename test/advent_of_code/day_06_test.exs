@@ -3,10 +3,12 @@ defmodule AdventOfCode.Day06Test do
 
   import AdventOfCode.Day06
 
+  @example "Time:      7  15   30
+Distance:  9  40  200"
+
   # @tag :skip
   test "part1" do
-    input = "Time:      7  15   30
-Distance:  9  40  200"
+    input = @example
     result = part1(input)
 
     assert result == 288
@@ -14,8 +16,7 @@ Distance:  9  40  200"
 
   # @tag :skip
   test "part2" do
-    input = "Time:      7  15   30
-Distance:  9  40  200"
+    input = @example
     result = part2(input)
 
     assert result == 71503

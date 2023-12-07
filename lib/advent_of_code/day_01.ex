@@ -1,27 +1,28 @@
 defmodule AdventOfCode.Day01 do
+  import Enum
+
   def part1(input) do
     String.split(input, "\n", trim: true)
-    |> Enum.map(fn line ->
-      Enum.join([
+    |> map(fn line ->
+      join([
         Regex.run(~r/(\d).*$/, line, capture: :all_but_first),
         Regex.run(~r/^.*(\d)/, line, capture: :all_but_first)
       ])
     end)
-    |> Enum.reduce(0, fn str, acc -> acc + String.to_integer(str) end)
+    |> reduce(0, fn str, acc -> acc + String.to_integer(str) end)
   end
 
   @first_digit ~r/(one|two|three|four|five|six|seven|eight|nine|\d).*$/
   @last_digit ~r/^.*(one|two|three|four|five|six|seven|eight|nine|\d)/
   def part2(input) do
     String.split(input, "\n", trim: true)
-    |> Enum.map(fn line ->
+    |> flat_map(fn line ->
       [
         Regex.run(@first_digit, line, capture: :all_but_first),
         Regex.run(@last_digit, line, capture: :all_but_first)
       ]
     end)
-    |> List.flatten()
-    |> Enum.map(fn digit ->
+    |> map(fn [digit] ->
       case digit do
         "one" -> "1"
         "two" -> "2"
@@ -35,7 +36,7 @@ defmodule AdventOfCode.Day01 do
         _ -> digit
       end
     end)
-    |> Enum.chunk_every(2)
-    |> Enum.reduce(0, fn strs, acc -> acc + String.to_integer(Enum.join(strs)) end)
+    |> chunk_every(2)
+    |> reduce(0, fn strs, acc -> acc + String.to_integer(join(strs)) end)
   end
 end

@@ -6,6 +6,7 @@
 
 - Day 1: Trebuchet?!
 - Day 2: Cube Conundrum
+- Day 3: Gear Ratios
 - Day 4: Scratchcards
 - Day 5: If You Give A Seed A Fertilizer (part 1)
 - Day 6: Wait For It

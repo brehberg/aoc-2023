@@ -11,6 +11,7 @@
 - Day 5: If You Give A Seed A Fertilizer (part 1)
 - Day 6: Wait For It
 - Day 7: Camel Cards
+- Day 8: Haunted Wasteland (part 1)
 - Day 9: Mirage Maintenance
 
 ### Repository Structure
